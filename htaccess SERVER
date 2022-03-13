@@ -1,0 +1,29 @@
+ErrorDocument 400 error400.php
+ErrorDocument 401 /error401.php
+ErrorDocument 403 /error403.php
+ErrorDocument 404 /error404.php
+ErrorDocument 500 /error500.php
+ErrorDocument 501 /error501.php
+ErrorDocument 502 /error502.php
+ErrorDocument 503 /error503.php
+
+#Wartung
+
+RewriteEngine On 
+RewriteBase / 
+RewriteCond %{REQUEST_URI} !\.css$
+RewriteCond %{REQUEST_URI} !\.js$
+RewriteCond %{REQUEST_URI} !\.jpg$
+RewriteCond %{REQUEST_URI} !\.png$
+RewriteCond %{REQUEST_URI} !\.ttf$
+RewriteCond %{REQUEST_URI} !\.eot$
+RewriteCond %{REQUEST_URI} !\.woff$
+RewriteCond %{REQUEST_URI} !\.woff2$
+RewriteCond %{REQUEST_URI} !\.svg$
+RewriteCond %{REQUEST_URI} !\.map$
+RewriteCond %{REQUEST_URI} !\.ico$
+RewriteCond %{REQUEST_URI} !\.xml$
+RewriteCond %{REQUEST_URI} !^/wartung.php$
+#RewriteRule ^(.*)$ /wartung.php [L]
+
+#Ein Hashtag zu Beginn von Zeile 27 deaktiviert den Wartungsmodus.

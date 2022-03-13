@@ -46,5 +46,5 @@
             document.write('<style type="text/css">body {visibility:hidden}</style>'),
             document.location = h + b + d
     }
-})("desktop", "indexPhone.html", "indexPhone.html");
+})("desktop", "indexPhone.php", "indexPhone.php");
 /*1. Desktop; 2. Phone; 3. Tablet*/
