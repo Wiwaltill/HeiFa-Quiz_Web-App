@@ -143,13 +143,9 @@ position: relative;
 		opacity: 0;
 	}
 }
-#applebadge img{
-	position: relative;
-	height: 71px !important;
-}
-#playbadge img{
-	position: relative;
-	height: 100px !important;
+
+.storeLinks img {
+	width: 200px;
 }
 
 /*Home Phone*/
