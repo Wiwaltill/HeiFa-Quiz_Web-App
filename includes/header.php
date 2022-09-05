@@ -10,7 +10,7 @@
 		<script src="https://kit.fontawesome.com/cf33211e1e.js" crossorigin="anonymous"></script>
 		<!--<link preload href="assets/style/fontawesome.css" type="text/css" rel="stylesheet" />
 		<link preload href="assets/style/bootstrap.css" type="text/css" rel="stylesheet" />
-		<!--<script src="/heifa/assets/scripts/phonetest.js"></script>-->
+		<script src="/heifa/assets/scripts/phonetest.js"></script>-->
 		
 		<?php include ("favicon.php"); ?>
 	</head>
