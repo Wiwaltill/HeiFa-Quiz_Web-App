@@ -6,30 +6,6 @@
 
 /*Home*/
 
-#welkomHeadtext{
-	position: relative;
-	width: 100%;
-	text-align: center;
-	color: white;
-	top: 25px;
-}
-#welkomHeadtext h3{
-	font-size:  1.75rem;
-	margin-bottom: .25rem !important;
-	margin-top: 0;
-	font-family: "museo300";
-	font-weight: 500;
-	line-height: 1.2;
-}
-#welkomHeadtext p{
-	margin-bottom: 0 !important;
-	margin-top: 0 !important;
-	display: block;
-	margin-block-start: 1em;
-	margin-block-end: 1em;
-	margin-inline-start: 0px;
-	margin-inline-end: 0px;
-}
 .spacer-big-home{
 	position: relative;
 	height: 100px;
@@ -66,28 +42,7 @@
 	right: 70px;
 	background-color: white;
 }
-.news {
-    display: inline-block;
-	overflow: hidden;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    transition: all .3s ease;
-}
-.news img {
-    display: block;
-    margin: 0;
-    padding: 0;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    transition: all .3s ease;
-	z-index: 1;
-}
-.news:hover img:not(.boxWeiss) {
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    transform: scale(1.2);
-	z-index: 1;
-}
+
 .boxWeiss{
 	position: absolute;
 	height: 100%;
@@ -226,57 +181,7 @@ h2 {
 	 -webkit-user-select: None; 
 	 user-select: None; 
 }
-#quiz ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-#quiz li {
-	color: #5b5b5a;
-	margin: 0;
-	padding: 0;
-	font-size: 1em;
-}
-#quiz #result li{
-	color: white;
-}
-#quiz label {
-	display: block;
-	background-color: #fffbf0;
-	border: 2px solid #5b5b5a;
-	border-radius: 0.2em;
-	margin: 0.1em 0;
-	padding: 1em 2em;
-	text-align: start;
-	max-width: 25em;
-	font-size: 0.9em;
-	transition: 0.2s;
-}
-@media (min-width: 800px){
-#quiz label:hover {
-	background-color: #b33627;
-	color: white;
-	transition: 0.2s;
-}
-}
-#quiz input:checked ~ label,
-#quiz input:focus ~ label {
-	background-color: #b33627;
-	border-color: #FFFFFF;
-	color: white;
-}
 
-#quiz input {
-	left: -9999px;
-	position: absolute;
-}
-#quiz button:not(.startBtn) {
-	display: none;
-}
-#quiz button,
-#quiz label {
-	cursor: pointer;
-}
 /* listing with solutions */
 .correct {
 	color: #0c0;
