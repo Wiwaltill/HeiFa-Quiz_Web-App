@@ -3,7 +3,7 @@ $site_name = "Home";
 $site_description = "Herzlich Willkommen zum offiziellen Kinderquiz zur Heiligtumsfahrt 2023 in Aachen";
 include ("includes/header.php"); ?>
 
-<script src="/heifa/assets/scripts/phonetest.js"></script>
+<script src="/assets/scripts/phonetest.js"></script>
 
 <div id="welkomHeadtext">
 	<h3>Herzlich willkommen</h3>
