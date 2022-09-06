@@ -1,0 +1,153 @@
+#quizblock{
+	position: relative;
+	font-family: "museo300";
+	z-index: 100;
+	top: 20px;
+}
+#intro{
+	font-size: 25px;
+}
+h2 {
+	background: none repeat scroll 0 0 !important;
+	padding: 1rem !important;
+	padding-left: 0rem !important;
+}
+#main{
+	 -ms-user-select: None; 
+	 -moz-user-select: None; 
+	 -webkit-user-select: None; 
+	 user-select: None; 
+}
+
+#quiz{
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        color: #5b5b5a;
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+    }
+    #result li{
+        color: white;
+    }
+    label {
+        display: block;
+        background-color: #fffbf0;
+        border: 2px solid #5b5b5a;
+        border-radius: 0.2em;
+        margin: 0.1em 0;
+        padding: 1em 2em;
+        text-align: start;
+        max-width: 25em;
+        font-size: 0.9em;
+        transition: 0.2s;
+    }
+    input {
+        left: -9999px;
+        position: absolute;
+    }
+    button:not(.startBtn) {
+        display: none;
+    }
+    input:checked ~ label,
+    input:focus ~ label {
+        background-color: #b33627;
+        border-color: #FFFFFF;
+        color: white;
+    }
+    button, label {
+        cursor: pointer;
+    }
+    @media (min-width: 800px){
+        label:hover {
+            background-color: #b33627;
+            color: white;
+            transition: 0.2s;
+        }
+    }
+}
+
+.correct:before,
+.wrong:before {
+	font: 1em bold;
+	padding: 0 0.2em;
+    font-family: "Font Awesome 5 Free" !important;
+	font-weight: 900 !important;
+}
+
+.correct:before {
+	content: "\f058" !important;
+	color: #0d0;
+}
+.wrong:before {
+	content: "\f057" !important;
+	/*color: #5C0001;*/
+	color: rgba(235,84,95,1.00);
+}
+
+/* listing with solutions */
+.correct {
+	color: #0c0;
+}
+.wrong {
+	/*color: #5C0001;*/
+	color: rgba(235,84,95,1.00);
+}
+
+#scores,
+#scores td,
+#scores th {
+	border: 1px solid black;
+	border-collapse: collapse;
+	text-align: center;
+}
+.startBtn {
+	display: block;
+    background-color: #fffbf0;
+    border: 2px solid #5b5b5a;
+    border-radius: 0.2em;
+    margin: 0.1em 0;
+    padding: 1em 2em;
+    text-align: start;
+    max-width: 25em;
+    font-size: 1em;
+	font-family: "museo700";
+	color: #5b5b5a;
+	transition: 0.5s;
+}
+.startBtn:hover {
+	background-color: #b33627;
+	color: white;
+	transition: 0.5s;
+}
+.dateschutzliste{
+	font-size: 16px;
+}
+#impdat{
+	position: relative;
+	top: 180px;
+	width: 80%;
+	left: 50px;
+}
+#headquiz{
+	font-size: 33px
+}
+.question{
+	font-family: "museo700";
+}
+.spacer-quiz{
+	position: relative;
+	height: 100px;
+}
+#quizblock p {
+	font-size: 20px;
+	/*color: #5b5b5a;*/
+	color: white;
+}
+ul {
+	font-size: 270%;
+}
