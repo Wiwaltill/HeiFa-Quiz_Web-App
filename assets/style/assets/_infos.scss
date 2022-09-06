@@ -1,0 +1,61 @@
+.content{
+    font-size: 25px;
+}
+ul{
+    font-size: 25px;
+}
+.content_box{
+    margin-bottom: 50px;
+/*	text-align: center;*/
+}
+
+@media(max-width:840px){
+	.headline{
+		margin-left: 20px;
+    	margin-right: 0px;
+	}
+	.all_content{
+		margin-left: 0px;
+    	margin-right: 0px;
+	}
+}
+.modal-content{
+	color: #5b5b5a !important;
+}
+#popOutSchliessen{
+	font-family: "Font Awesome 5 Free" !important;
+	font-weight: 900 !important;
+}
+/*.modal-title{
+	width: 100%;
+	text-align: center !important;
+}*/
+.infosImage{
+	position: relative;
+	width: 40% !important;
+}
+.spacer-mid-infos{
+	height: 100px;
+}
+.infosBorder{
+	border: 2px solid white;
+	
+}
+
+#ContainerInfos{
+	position: relative;
+	top: 50px;
+    h2{
+        font-family: "museo700";
+    }
+}
+
+.video{
+    border-width: 5px;
+    border-style: solid;
+    border-color: white;
+    @media (min-width:992px){
+        width: 847px;
+        height: 480px;
+    }
+}
