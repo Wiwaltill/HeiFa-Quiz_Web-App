@@ -23,7 +23,7 @@ var audio = document.getElementById("bgaudio");
                 width: "1920",
 				videoId: video1ID,
 				playerVars: { 
-					autoplay: 0,
+					autoplay: 1,
                     controls: 0,
                     disablekb: 1,
                     enablejsapi: 1,
@@ -34,7 +34,7 @@ var audio = document.getElementById("bgaudio");
                     iv_load_policy: 3,
                     showinfo: 0,
                     cc_lang_pref: localStorage.getItem("language")},
-					loop: 1,
+					loop: 0,
 				
 				events: {
 				'onReady': onPlayerReady,
@@ -139,35 +139,40 @@ var playbuttonmobile = document.getElementById('playbuttonmobile');
 	
 function video2(){
 	player.cueVideoById({videoId:video2ID})
-	player.playVideo()
+	playerPlay()
 }
 function video3(){
 	player.cueVideoById({videoId:video3ID})
-	player.playVideo()
+	playerPlay()
 }
 function video4(){
 	player.cueVideoById({videoId:video4ID})
-	player.playVideo()
+	playerPlay()
 }
 function video5(){
 	player.cueVideoById({videoId:video5ID})
-	player.playVideo()
+	playerPlay()
 }
 function video6(){
 	player.cueVideoById({videoId:video6ID})
-	player.playVideo()
+	playerPlay()
 }
 function video7(){
 	player.cueVideoById({videoId:video7ID})
-	player.playVideo()
+	playerPlay()
 }
 function video8(){
 	player.cueVideoById({videoId:video8ID})
-	player.playVideo()
+	playerPlay()
 }
 function video9(){
 	player.cueVideoById({videoId:video9ID})
-	player.playVideo()
+	playerPlay()
+}
+
+function playerPlay(){
+	var fn = function(){ player.playVideo(); }
+    setTimeout(fn, 1000);
 }
 
 /*Ehemals vq-script.js*/
@@ -420,3 +425,11 @@ document.addEventListener("visibilitychange", function() {
 });
 
 */
+
+function sleep(milliseconds) {
+	const date = Date.now();
+	let currentDate = null;
+	do {
+	  currentDate = Date.now();
+	} while (currentDate - date < milliseconds);
+  }
