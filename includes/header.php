@@ -5,7 +5,6 @@
 		<title><?=$site_name?> | Heiligtumsfahrt Quiz 2023</title>
 		<meta name="description" content=<?=$site_description?>>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link preload href="assets/style/main.css" type="text/css" rel="stylesheet" />
 		<link preload href="assets/style/style.css" type="text/css" rel="stylesheet" />
 		<script src="https://kit.fontawesome.com/cf33211e1e.js" crossorigin="anonymous"></script>
 		<!--<link preload href="assets/style/fontawesome.css" type="text/css" rel="stylesheet" />
