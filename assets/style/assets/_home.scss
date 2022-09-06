@@ -1,0 +1,201 @@
+.spacer-big-home{
+	position: relative;
+	height: 100px;
+	top: 400px;
+}
+.alle_news {
+	top: 260px;
+	position: absolute; 
+	width: 100%;
+}
+#welkomHeadtext{
+	position: relative;
+	width: 100%;
+	text-align: center;
+	color: white;
+	top: 25px;
+
+    h3 {
+        font-size:  1.75rem;
+        margin-bottom: .25rem !important;
+        margin-top: 0;
+        font-family: "museo300";
+        font-weight: 500;
+        line-height: 1.2;
+    }
+    p {
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+}
+.news {
+    display: inline-block;
+	overflow: hidden;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+
+    img {
+        display: block;
+        margin: 0;
+        padding: 0;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        transition: all .3s ease;
+        z-index: 1;
+    }
+    &:hover img:not(.boxWeiss) {
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        transform: scale(1.2);
+        z-index: 1;
+    }
+}
+.news1 {
+	width: 400px;
+	float: left;
+	left: 70px;
+	display: inline;
+	position: absolute;
+	border: 5px solid white;
+	background-color: white;
+}
+.news2 {
+	width: 400px;
+	float: left;
+	position: absolute;
+	border: 5px solid white;
+	left: 50%;
+	margin-left: -205px;
+	background-color: white;
+}
+.news3 {
+	width: 400px;
+	float: right;
+	position: absolute;
+	border: 5px solid white;
+	right: 70px;
+	background-color: white;
+}
+
+.boxWeiss{
+	position: absolute;
+	height: 100%;
+	z-index: 1;
+	width: 110%
+}
+.headlineBox {
+position: relative;
+	font-size: 20px;
+	color: black !important; 
+	font-family: "museo700";
+	padding-left: 10px;
+	padding-right: 10px;
+	z-index: 100 !important;
+}
+.Bildunterschrift{
+	position: relative;
+	color: #5b5b5a !important;
+	font-family: "museo700";
+	font-size: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
+	z-index: 100 !important;
+}
+.blocksIndex{
+	display: none;
+}
+@media  (max-width: 1380px) {
+	.alle_news{
+		display: none;
+	}
+	.blocksIndex{
+		display: block !important;
+		position: relative;
+		top: 50px !important;
+	}
+	#DisclaimerApp{
+		position: relative;
+		top: 50px !important;
+	}
+	.spacer-big-home{
+		position: relative;
+		height: 100px;
+		top: 50px;
+	}
+}
+#DisclaimerApp{
+	position: relative;
+	top: 430px;
+}
+@media (max-width: 991px){
+	.product-device{
+		opacity: 0;
+	}
+}
+
+.storeLinks img {
+	width: 200px;
+}
+
+
+/* --- Mobile --- */
+
+#blocks{
+	position: relative;
+	top: 150px;
+}
+.card-full{
+	background-color: transparent !important;
+	border: none !important;
+	color: white !important;
+}
+.card-full-text{
+	text-align: center;
+	position: relative;
+	width: 100%;
+}
+#menuToggle
+{
+  position: absolute !important;
+}
+#carouselStartseite{
+	position: relative;
+	top: 150px;
+}
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+.spacer-mid-phone{
+	height: 300px;	
+}
+#blocks > body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff
+}
+#all-HomePhone{
+	position: absolute;
+	top: 0px;
+}
+.card a.card-body:hover {
+	background: rgba(0, 0, 0, .125);
+	color: #000;
+	}
+#DisclaimerAppMobile{
+	position: relative;
+	top: 200px;
+	margin-left:  10px;
+	margin-right: 10px;
+}
