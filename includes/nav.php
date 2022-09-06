@@ -4,15 +4,15 @@
 </div>
 <div id="bootsmenu">
 			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				
 				<div class="collapse navbar-collapse justify-content-md-center" id="navbarNav">
 					<ul class="navbar-nav">
                         <?php if ($_SERVER["SCRIPT_NAME"] == "/index.php" OR $_SERVER["SCRIPT_NAME"] == "indexPhone.php"): ?>
-                            <li class="nav-item active">
-							    <a class="nav-link" href="index.php">Home <span class="sr-only">(aktuell)</span></a>
+                            <li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="index.php">Home</a>
 						    </li>
                         <?php else: ?>
                             <li class="nav-item">
@@ -20,8 +20,8 @@
 						    </li>
                         <?php endif; ?>
                         <?php if ($_SERVER["SCRIPT_NAME"] == "/quiz.php"): ?>
-                            <li class="nav-item active">
-							    <a class="nav-link" href="quiz.php">Quiz <span class="sr-only">(aktuell)</span></a>
+                            <li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="quiz.php">Home</a>
 						    </li>
                         <?php else: ?>
                             <li class="nav-item">
@@ -29,8 +29,8 @@
 						    </li>
                         <?php endif; ?>
                         <?php if ($_SERVER["SCRIPT_NAME"] == "/vq.php"): ?>
-                            <li class="nav-item active">
-							    <a class="nav-link" href="vq    .php">Videoquiz <span class="sr-only">(aktuell)</span></a>
+                            <li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="vq.php">Videoquiz</a>
 						    </li>
                         <?php else: ?>
                             <li class="nav-item">
@@ -49,13 +49,13 @@
                                 </div>
                             </li>
                         <?php else: ?>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="infos.php" id="dropdownNav1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Infos</a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownNav1">
-                                    <a class="dropdown-item" href="infos.php#loesungenQuiz">Lösungen Quiz</a>
-                                    <a class="dropdown-item" href="infos.php#loesungenVideoquiz">Lösungen Videoquiz</a>
-                                </div>
-                            </li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="infos.php" id="dropdownNav1" role="button" data-bs-toggle="dropdown" aria-expanded="false">Infos</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="infos.php#loesungenQuiz">Lösungen Quiz</a></li>
+									<li><a class="dropdown-item" href="infos.php#loesungenVideoquiz">Lösungen Videoquiz</a></li>
+								</ul>
+							</li>
                         <?php endif; ?>
 					</ul>
 				</div>
