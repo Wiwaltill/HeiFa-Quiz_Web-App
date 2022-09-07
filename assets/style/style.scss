@@ -52,7 +52,7 @@ body:not(.blocks) {
 	right: 30px;
 	z-index: 1001;
 }
-a:not(.dropdown-item):not(.blocks) {
+a:not(.blocks) {
 	text-decoration: none;
 	color: white;
 	transition: color 0.5s;
@@ -61,6 +61,12 @@ a:not(.dropdown-item):not(.blocks) {
 a:hover:not(.blocks) {
 	color: rgb(91, 91, 90);
 	transition: color 0.5s;
+}
+.dropdown-item{
+    color: #212529 !important;
+}
+.dropdown-item:hover, .dropdown-item:focus{
+    color: #16181b !important;
 }
 @media  (max-width: 1380px) {
 	.logo3{
