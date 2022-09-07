@@ -21,7 +21,7 @@
                         <?php endif; ?>
                         <?php if ($_SERVER["SCRIPT_NAME"] == "/quiz.php"): ?>
                             <li class="nav-item">
-								<a class="nav-link active" aria-current="page" href="quiz.php">Home</a>
+								<a class="nav-link active" aria-current="page" href="quiz.php">Quiz</a>
 						    </li>
                         <?php else: ?>
                             <li class="nav-item">
