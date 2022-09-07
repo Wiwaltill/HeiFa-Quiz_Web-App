@@ -10,7 +10,7 @@
 				
 				<div class="collapse navbar-collapse justify-content-md-center" id="navbarNav">
 					<ul class="navbar-nav">
-                        <?php if ($_SERVER["SCRIPT_NAME"] == "/index.php" OR $_SERVER["SCRIPT_NAME"] == "indexPhone.php"): ?>
+                        <?php if ($_SERVER["SCRIPT_NAME"] == "/index.php" OR $_SERVER["SCRIPT_NAME"] == "/indexPhone.php"): ?>
                             <li class="nav-item">
 								<a class="nav-link active" aria-current="page" href="index.php">Home</a>
 						    </li>
@@ -50,12 +50,12 @@
                             </li>
                         <?php else: ?>
 							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="infos.php" id="dropdownNav1" role="button" data-bs-toggle="dropdown" aria-expanded="false">Infos</a>
-								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="infos.php#loesungenQuiz">Lösungen Quiz</a></li>
-									<li><a class="dropdown-item" href="infos.php#loesungenVideoquiz">Lösungen Videoquiz</a></li>
-								</ul>
-							</li>
+                                <a class="nav-link dropdown-toggle" href="infos.php" id="dropdownNav1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Infos <span class="sr-only">(aktuell)</span></a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownNav1">
+                                    <a class="dropdown-item" href="infos.php#loesungenQuiz">Lösungen Quiz</a>
+                                    <a class="dropdown-item" href="infos.php#loesungenVideoquiz">Lösungen Videoquiz</a>
+                                </div>
+                            </li>
                         <?php endif; ?>
 					</ul>
 				</div>
