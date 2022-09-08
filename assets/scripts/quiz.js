@@ -2,8 +2,10 @@
 // Production steps of ECMA-262, Edition 6, 22.1.2.
 
 var correct = 0;
+var highscore = 0;
 var num = 0;
 $("#QuizPunkte").hide();
+$("#Highscore").hide();
 
 if (!Array.from) {
 	Array.from = (function () {
@@ -308,6 +310,7 @@ var myQuiz = {
 		t.currentQuestion = t.questions.shift();
 		t.createOptions();
 		$("#QuizPunkte").hide();
+		$("#Highscore").hide();
 	},
 	questions: [],
 	showResults: function () {
@@ -420,4 +423,9 @@ document.addEventListener("DOMContentLoaded", function () {
 function showScore(){
 	$("#QuizPunktestand").text(correct);
 	$("#QuizPunkte").fadeIn();
+	if(highscore < correct){
+		highscore = correct;
+	}
+	$("#HighscorePunktestand").text(highscore);
+	$("#Highscore").fadeIn()
 }
