@@ -1,6 +1,6 @@
 on:
   push:
-    branches: [ "Sass-Support" ]
+    branches: [ "Main" ]
 
 jobs:
   build_css:
