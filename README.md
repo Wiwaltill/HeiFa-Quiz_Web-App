@@ -1,3 +1,5 @@
+![Bildschirmfoto-2021-04-07-um-20 58 12](https://github.com/user-attachments/assets/706b3033-ca0c-4679-8ea8-955012538a87)
+
 # Project Overview
 
 This is a PHP-based web application that is a quiz platform for the Heiligtumsfahrt 2023 in Aachen. The application includes multiple pages for quizzes, video quizzes, and information.
@@ -7,6 +9,10 @@ This is a PHP-based web application that is a quiz platform for the Heiligtumsfa
 * Video quiz with 7 questions
 * Information section with answers and explanations
 * Feedback form to report errors or suggestions
+
+
+![Bildschirmfoto-2021-04-07-um-20 55 42](https://github.com/user-attachments/assets/5e005d60-f0b1-49c2-9631-83b6c0219dd5)
+
 
 # Usage
 
