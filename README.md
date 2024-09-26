@@ -30,7 +30,7 @@ This is a PHP-based web application that is a quiz platform for the Heiligtumsfa
 
 # License
 
-* This project is licensed under the MIT License.
+* This project is licensed under the GPL-3.0 license.
 * See the LICENSE file for more information.
 
 # Acknowledgments
