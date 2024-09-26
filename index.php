@@ -1,6 +1,7 @@
 <?php 
 $site_name = "Home";
 $site_description = "Herzlich Willkommen zum offiziellen Kinderquiz zur Heiligtumsfahrt 2023 in Aachen";
+$body_class = 'class="bodyWhite"';
 include ("includes/header.php"); ?>
 
 <script src="assets/scripts/phonetest.js"></script>
