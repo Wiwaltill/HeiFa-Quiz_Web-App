@@ -1,50 +1,81 @@
+// Self-invoking anonymous function to encapsulate the code
 (function(c, b, d) {
-    var a = function() {
-            if (navigator.maxTouchPoints > 1)
-                return !0;
-            if (window.matchMedia && window.matchMedia("(-moz-touch-enabled)").matches)
-                return !0;
-            for (var a = ["Webkit", "Moz", "O", "ms", "Khtml"], b = 0, c = a.length; b < c; b++) {
-                var d = a[b] + "MaxTouchPoints";
-                if (d in navigator && navigator[d])
-                    return !0
+    // Define a function to detect touch events
+    var isTouchDevice = function() {
+        // Check if the browser supports touch events
+        if (navigator.maxTouchPoints > 1) {
+            return true;
+        }
+        // Check if the browser supports Mozilla touch events
+        if (window.matchMedia && window.matchMedia("(-moz-touch-enabled)").matches) {
+            return true;
+        }
+        // Check if the browser supports Webkit, Moz, O, ms, or Khtml touch events
+        for (var i = 0, len = ["Webkit", "Moz", "O", "ms", "Khtml"].length; i < len; i++) {
+            var prefix = ["Webkit", "Moz", "O", "ms", "Khtml"][i] + "MaxTouchPoints";
+            if (prefix in navigator && navigator[prefix]) {
+                return true;
             }
-            try {
-                return document.createEvent("TouchEvent"), !0
-            } catch (f) {}
-            return !1
-        }(),
-        f = function(a) {
-            a += "=";
-            for (var b = document.cookie.split(";"), c = 0; c < b.length; c++) {
-                for (var d = b[c]; d.charAt(0) == " ";)
-                    d = d.substring(1, d.length);
-                if (d.indexOf(a) ==
-                0)
-                    return d.substring(a.length, d.length)
+        }
+        // Try to create a touch event to detect support
+        try {
+            document.createEvent("TouchEvent");
+            return true;
+        } catch (e) {}
+        // If all else fails, assume it's not a touch device
+        return false;
+    }();
+
+    // Define a function to get a cookie value
+    var getCookieValue = function(a) {
+        a += "=";
+        for (var i = 0, len = document.cookie.split(";").length; i < len; i++) {
+            var cookie = document.cookie.split(";")[i];
+            while (cookie.charAt(0) == " ") {
+                cookie = cookie.substring(1, cookie.length);
             }
-            return null
-        };
-    if (f("inbrowserediting") != "true") {
-        var h,
-            f = f("devicelock");
-        f == "phone" && d ? h = d : f == "tablet" && b && (h = b);
-        if (f != c && !h)
-            if (window.matchMedia)
-                window.matchMedia("(max-device-width: 415px)").matches && d ? h = d : window.matchMedia("(max-device-width: 960px)").matches && b && a && (h = b);
-            else {
-                var c = Math.min(screen.width, screen.height) / (window.devicePixelRatio || 1),
-                    f = window.screen.systemXDPI || 0,
-                    g = window.screen.systemYDPI || 0,
-                    f = f > 0 && g > 0 ? Math.min(screen.width / f, screen.height / g) :
-                    0;
-                (c <= 370 || f != 0 && f <= 3) && d ? h = d : c <= 960 && b && a && (h = b)
+            if (cookie.indexOf(a) == 0) {
+                return cookie.substring(a.length, cookie.length);
             }
-        if (h)
-            b = document.location.search || "",
-            d = document.location.hash || "",
-            document.write('<style type="text/css">body {visibility:hidden}</style>'),
-            document.location = h + b + d
+        }
+        return null;
+    };
+
+    // Check if the user is not in browser editing mode
+    if (getCookieValue("inbrowserediting") != "true") {
+        // Get the device lock cookie value
+        var deviceLock = getCookieValue("devicelock");
+        // Determine the device type based on the cookie value and screen size
+        var deviceType;
+        if (deviceLock == "phone" && d) {
+            deviceType = d;
+        } else if (deviceLock == "tablet" && b) {
+            deviceType = b;
+        } else {
+            if (window.matchMedia) {
+                if (window.matchMedia("(max-device-width: 415px)").matches && d) {
+                    deviceType = d;
+                } else if (window.matchMedia("(max-device-width: 960px)").matches && b && isTouchDevice) {
+                    deviceType = b;
+                }
+            } else {
+                var screenWidth = Math.min(screen.width, screen.height) / (window.devicePixelRatio || 1);
+                var systemXDPI = window.screen.systemXDPI || 0;
+                var systemYDPI = window.screen.systemYDPI || 0;
+                var dpi = systemXDPI > 0 && systemYDPI > 0 ? Math.min(screen.width / systemXDPI, screen.height / systemYDPI) : 0;
+                if (screenWidth <= 370 || dpi != 0 && dpi <= 3) {
+                    deviceType = d;
+                } else if (screenWidth <= 960 && b && isTouchDevice) {
+                    deviceType = b;
+                }
+            }
+        }
+        // If a device type is determined, redirect to the corresponding page
+        if (deviceType) {
+            var search = document.location.search || "";
+            var hash = document.location.hash || "";
+            document.write('<style type="text/css">body {visibility:hidden}</style>');
+            document.location = deviceType + search + hash;
+        }
     }
 })("desktop", "indexPhone.php", "indexPhone.php");
-/*1. Desktop; 2. Phone; 3. Tablet*/
